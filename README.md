@@ -1,2 +1,9 @@
-# Machine-Learning
-Repositorio para proyecto final del curso MA5204 de la FCFM (Universidad de Chile). 
+# Proyecto-Conjunto
+Repositorio para proyecto conjunto de Data Science/Machine Learning entre:
+
+- Andrés Olivares
+- Branco Paineman
+- Mariano Suárez
+- Nicolás Acevedo
+- Pablo Ubilla
+
