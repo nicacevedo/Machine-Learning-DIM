@@ -5,4 +5,8 @@ def test(x):
 x = input()
 test(x)
 
+<<<<<<< HEAD
  # toi en branchiii
+=======
+print('Cambio de Nico')
+>>>>>>> main
