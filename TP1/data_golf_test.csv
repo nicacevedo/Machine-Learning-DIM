@@ -1,0 +1,5 @@
+Outlook,Temperature,Humidity,Windy
+Sunny,20,50,FALSE
+Sunny,30,50,TRUE
+Rain,10,60,FALSE
+Rain,20,60,TRUE

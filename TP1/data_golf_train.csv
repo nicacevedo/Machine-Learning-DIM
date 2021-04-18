@@ -1,0 +1,15 @@
+Outlook,Temperature,Humidity,Windy,Play
+Sunny,30.5,90,FALSE,No
+Sunny,29,82,TRUE,No
+Overcast,28.2,95,FALSE,Yes
+Rain,21,86,FALSE,Yes
+Rain,5.3,60,FALSE,Yes
+Rain,8.8,63,TRUE,No
+Overcast,0,55,TRUE,Yes
+Sunny,17,80,FALSE,No
+Sunny,7,65,FALSE,Yes
+Rain,15.4,70,FALSE,Yes
+Sunny,16,59,TRUE,Yes
+Overcast,19.5,85,TRUE,Yes
+Overcast,31,55,FALSE,Yes
+Rain,20,88,TRUE,No
