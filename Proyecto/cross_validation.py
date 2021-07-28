@@ -66,7 +66,7 @@ class StocksData:
 
             # Data to atribute
             self.set_data(data)
-            self.set_data(data_volume)
+            self.set_volume_data(data_volume)
         else:
 
             # Drop columns 
@@ -106,7 +106,12 @@ class StocksData:
         # 1. Mean of daily returns (% changes in price)
         price = self.data.iloc[1:,:]
         price_lag = self.data.iloc[:-1,:].to_numpy()
+        # print('Features')
+        # print(self.data)
+        # print(price)
+        # print(price_lag)
         daily_returns = ( price - price_lag )/price_lag
+        # print(daily_returns)
         df['Return'] = np.mean( daily_returns )
 
         # 2. Volatility (std % changes in price)
@@ -165,7 +170,7 @@ class StocksTimeCV:
             sub_first_date = sub_last_date - delta_horizon
             sub_last_date  = sub_last_date - delta_day # avoid repeated days
             # Stock object
-            stocks = StocksData(self.tickers, sub_first_date, sub_last_date).download_data(volume=True).clean_data()
+            stocks = StocksData(self.tickers, sub_first_date, sub_last_date).download_data(volume=False).clean_data()
             train_stocks.append(stocks) # Add to train sets
 
             # Update tickers
@@ -177,7 +182,7 @@ class StocksTimeCV:
 
         # Same for test set
         first_date = self.last_date - delta_horizon
-        stocks = StocksData(self.tickers, first_date, self.last_date).download_data(volume=True).clean_data()
+        stocks = StocksData(self.tickers, first_date, self.last_date).download_data(volume=False).clean_data()
         self.test_stocks = stocks
 
         # Update tickers
@@ -230,9 +235,9 @@ if __name__ == '__main__':
 
 
     # Input
-    weeks_horizon = 5
-    n_train_sets = 3
-    threshold = 0.04
+    weeks_horizon = 4   # delta t
+    n_train_sets = 5    
+    threshold = 0.04    # 
     model = KNeighborsClassifier(n_neighbors=5, weights='distance')
     # model = SVC(kernel='linear')
 
